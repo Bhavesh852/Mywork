@@ -47,8 +47,8 @@ def sendEmail(to, content):
 	server = smtplib.SMTP('smtp.gmail.com', 587)
 	server.ehlo()
 	server.starttls()
-	server.login('bchandora60@gmail.com', 'Bh@ve$H60')
-	server.sendmail('bchandora60@gmail.com', to, content)
+	server.login('//Your email id//', '//password//')#less secure should be 'ON' on your gmail.
+	server.sendmail('//your email id//', to, content)
 	server.close() 
 
 if __name__ == '__main__':
@@ -84,11 +84,11 @@ if __name__ == '__main__':
 			strTime = datetime.datetime.now().strftime("%H:%M:%S")
 			speak(f"Sir! the time is {strTime}")
 
-		elif 'email to bhavesh' in query:
+		elif 'email' in query:
 			try:
 				speak("what should I say")
 				content = takecommand()
-				to = "akshitvaishnav321@gmail.com"
+				to = "example@gmail.com"
 				sendEmail(to, content)
 				speak("Email has been sent successfully!")
 			except Exception as e:
