@@ -44,11 +44,11 @@ def takecommand():
 	return query
 
 def sendEmail(to, content):
-	server = smtplib.SMTP('smtp.gmail.com', 587)
+	server = smtplib.SMTP('smtp.gmail.com', 587)#your account should be gmail account.
 	server.ehlo()
 	server.starttls()
-	server.login('//Your email id//', '//password//')#less secure should be 'ON' on your gmail.
-	server.sendmail('//your email id//', to, content)
+	server.login('//example@gmail.com//', '//password//')#less secure should be 'ON' on your gmail.
+	server.sendmail('//example@gmail.com//', to, content)
 	server.close() 
 
 if __name__ == '__main__':
